@@ -1,13 +1,5 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
-
-## About Laravel
+## SOBRE EL PROYECTO
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
@@ -35,20 +27,41 @@ We would like to extend our thanks to the following sponsors for funding Laravel
 
 ### Premium Partners
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+# Proyecto_AMCA
 
+Este repositoria se usara para desarrollar el proyecto de AMCA
+
+## *INFORMACION DEL PROYECTO*
+
+El proyecto está orientado a crear un sistema de reservas para la empresa **LONDON TRAVEL**, con el fin de ofrecer una solución que permita un control integral en la reserva de tours, la gestión de rutas y los pagos. Este sistema busca ser amigable para los administradores y ofrecer herramientas para gestionar la información y mantener el sistema al día. La propuesta busca mejorar la operatividad y reforzar el control administrativo en la empresa.
+
+## NOMBRE DEL PROYECTO
+
+*Sistema Web de Reserva de Tours para la empresa London Travel*
+
+## INTEGRANTES
+| ROL/ FUNCION | APELLIDOS | NOMBRES |
+| ------------ | ------------ | ------------ |
+|Coach      | Tintaya Ramos      | Marioly Belen      |
+| Programador Front End   | Encinas Gutierrez        | Ailyn Lenny     |
+| Programador Front End       | Montaño Laura        | Carlos Walter     |
+| Programador Back End       | Thompson Villalobos        | Alvaro Fabian     |
+
+
+## HERRAMIENTAS DE DESAROLLO
+Se utilizará **Laravel** como herramienta principal de desarrollo.
+
+*Laravel* es un framework de desarrollo web de código abierto basado en PHP, diseñado para facilitar la creación de aplicaciones web robustas y escalables. Es conocido por su sintaxis elegante y su enfoque en la simplicidad, lo que permite a los desarrolladores construir aplicaciones complejas de forma más eficiente.
+
+## GESTOR BD
+
+Como gestor utilizaremos MySQL Work Bench 
+
+MySQL Workbench es una herramienta visual de diseño y administración de bases de datos para MySQL. Proporciona un entorno integrado que permite a los desarrolladores y administradores de bases de datos gestionar sus sistemas de manera eficiente y eficaz.
+
+## DIAGRAMA FISICO DE LA BD
+
+![Diagrama del Sistema](ModeloLogico2.png)
 ## Contributing
 
 Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
