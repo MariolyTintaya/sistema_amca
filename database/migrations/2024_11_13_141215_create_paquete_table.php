@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('nombre', 45);
             $table->date('fechaInicio');
             $table->date('fechaFin');
+            $table->tinyInteger('activo');
             $table->integer('tour_id_tour')->index('fk_paquete_tour1_idx');
         });
     }

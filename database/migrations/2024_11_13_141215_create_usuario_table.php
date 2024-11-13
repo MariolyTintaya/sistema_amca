@@ -11,11 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('parada', function (Blueprint $table) {
-            $table->integer('id_parada', true);
+        Schema::create('usuario', function (Blueprint $table) {
+            $table->integer('id_usuario')->primary();
             $table->string('nombre', 45);
-            $table->string('descripcion', 1000);
-            $table->integer('ruta_id_ruta')->index('fk_parada_ruta_idx');
+            $table->string('correo', 100)->nullable();
+            $table->string('contraseña');
+            $table->tinyInteger('activo');
+            $table->integer('rol_id_rol')->index('fk_usuario_rol_idx');
         });
     }
 
@@ -24,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('parada');
+        Schema::dropIfExists('usuario');
     }
 };

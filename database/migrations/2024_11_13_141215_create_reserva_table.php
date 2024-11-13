@@ -16,6 +16,7 @@ return new class extends Migration
             $table->integer('monto_total');
             $table->integer('num_personas');
             $table->date('fecha_creacion');
+            $table->tinyInteger('activo');
             $table->integer('tour_id_tour')->index('fk_reserva_tour_idx');
             $table->integer('cliente_id_cliente')->index('fk_reserva_cliente_idx');
             $table->integer('deposito_id_deposito')->index('fk_reserva_deposito_idx');

@@ -11,12 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('guia', function (Blueprint $table) {
-            $table->integer('id_guia', true);
-            $table->string('nombre', 45);
-            $table->integer('celular');
-            $table->string('disponibilidad', 45);
-            $table->integer('tour_id_tour')->index('fk_guia_tour1_idx');
+        Schema::create('tour', function (Blueprint $table) {
+            $table->integer('id_tour', true);
+            $table->string('informe', 1000);
+            $table->date('fecha');
+            $table->tinyInteger('activo');
+            $table->string('transporte_num_placa', 25)->index('fk_tour_transporte_idx');
         });
     }
 
@@ -25,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('guia');
+        Schema::dropIfExists('tour');
     }
 };

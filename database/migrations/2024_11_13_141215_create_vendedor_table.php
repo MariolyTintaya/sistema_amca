@@ -17,6 +17,7 @@ return new class extends Migration
             $table->date('fecha_contrato')->nullable();
             $table->string('turno', 25)->nullable();
             $table->integer('celular')->nullable();
+            $table->tinyInteger('activo');
             $table->integer('usuario_id_usuario')->index('fk_vendedor_usuario1_idx');
         });
     }

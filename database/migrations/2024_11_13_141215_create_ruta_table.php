@@ -15,6 +15,7 @@ return new class extends Migration
             $table->integer('id_ruta', true);
             $table->integer('distancia')->nullable();
             $table->string('estadoRuta', 45);
+            $table->tinyInteger('activo');
             $table->integer('destino_id_destino')->index('fk_ruta_destino_idx');
         });
     }

@@ -15,6 +15,7 @@ return new class extends Migration
             $table->string('num_placa', 25)->primary();
             $table->integer('num_asientos');
             $table->string('tipo_transporte', 45);
+            $table->tinyInteger('activo');
         });
     }
 

@@ -11,11 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('tour', function (Blueprint $table) {
-            $table->integer('id_tour', true);
-            $table->string('informe', 1000);
+        Schema::create('deposito', function (Blueprint $table) {
+            $table->integer('id_deposito', true);
             $table->date('fecha');
-            $table->string('transporte_num_placa', 25)->index('fk_tour_transporte_idx');
+            $table->tinyInteger('activo');
+            $table->integer('pago_id_pago')->index('fk_deposito_pago_idx');
+            $table->integer('cliente_id_cliente')->index('fk_deposito_cliente1_idx');
         });
     }
 
@@ -24,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('tour');
+        Schema::dropIfExists('deposito');
     }
 };

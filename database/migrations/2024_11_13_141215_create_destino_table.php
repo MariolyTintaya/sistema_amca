@@ -11,12 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('usuario', function (Blueprint $table) {
-            $table->integer('id_usuario')->primary();
+        Schema::create('destino', function (Blueprint $table) {
+            $table->integer('id_destino', true);
             $table->string('nombre', 45);
-            $table->string('correo', 100)->nullable();
-            $table->string('contraseña');
-            $table->integer('rol_id_rol')->index('fk_usuario_rol_idx');
+            $table->string('pais', 45);
+            $table->string('cuidad', 45);
+            $table->tinyInteger('activo');
+            $table->integer('tour_id_tour')->index('fk_destino_tour1_idx');
         });
     }
 
@@ -25,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('usuario');
+        Schema::dropIfExists('destino');
     }
 };

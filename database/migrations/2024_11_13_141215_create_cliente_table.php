@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('ape_paterno', 45);
             $table->string('ape_materno', 45);
             $table->date('fecha_nac');
+            $table->tinyInteger('activo');
             $table->integer('tipo_cliente_id_tipo')->index('fk_cliente_tipo_cliente_idx');
         });
     }
