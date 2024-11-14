@@ -11,16 +11,19 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('cliente', function (Blueprint $table) {
-            $table->integer('id_cliente', true);
-            $table->integer('nroDocumento');
-            $table->integer('celular');
-            $table->string('nombre', 45);
-            $table->string('ape_paterno', 45);
-            $table->string('ape_materno', 45);
-            $table->date('fecha_nac');
-            $table->integer('tipo_cliente_id_tipo')->index('fk_cliente_tipo_cliente_idx');
-        });
+        // Verificar si la tabla 'cliente' no existe antes de crearla
+        if (!Schema::hasTable('cliente')) {
+            Schema::create('cliente', function (Blueprint $table) {
+                $table->integer('id_cliente', true);
+                $table->integer('nroDocumento');
+                $table->integer('celular');
+                $table->string('nombre', 45);
+                $table->string('ape_paterno', 45);
+                $table->string('ape_materno', 45);
+                $table->date('fecha_nac');
+                $table->integer('tipo_cliente_id_tipo')->index('fk_cliente_tipo_cliente_idx');
+            });
+        }
     }
 
     /**

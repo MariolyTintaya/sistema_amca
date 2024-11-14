@@ -11,14 +11,16 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('vendedor', function (Blueprint $table) {
-            $table->integer('id_vendedor', true);
-            $table->decimal('sueldo', 5)->nullable();
-            $table->date('fecha_contrato')->nullable();
-            $table->string('turno', 25)->nullable();
-            $table->integer('celular')->nullable();
-            $table->integer('usuario_id_usuario')->index('fk_vendedor_usuario1_idx');
-        });
+        if (!Schema::hasTable('vendedor')) {
+            Schema::create('vendedor', function (Blueprint $table) {
+                $table->integer('id_vendedor', true);
+                $table->decimal('sueldo', 5)->nullable();
+                $table->date('fecha_contrato')->nullable();
+                $table->string('turno', 25)->nullable();
+                $table->integer('celular')->nullable();
+                $table->integer('usuario_id_usuario')->index('fk_vendedor_usuario1_idx');
+            });
+        }
     }
 
     /**

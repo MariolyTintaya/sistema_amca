@@ -11,16 +11,18 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('paquete', function (Blueprint $table) {
-            $table->integer('id_paquete', true);
-            $table->string('temporada', 45);
-            $table->string('tipo_paquete', 45);
-            $table->integer('precio');
-            $table->string('nombre', 45);
-            $table->date('fechaInicio');
-            $table->date('fechaFin');
-            $table->integer('tour_id_tour')->index('fk_paquete_tour1_idx');
-        });
+        if (!Schema::hasTable('paquete')) {
+            Schema::create('paquete', function (Blueprint $table) {
+                $table->integer('id_paquete', true);
+                $table->string('temporada', 45);
+                $table->string('tipo_paquete', 45);
+                $table->integer('precio');
+                $table->string('nombre', 45);
+                $table->date('fechaInicio');
+                $table->date('fechaFin');
+                $table->integer('tour_id_tour')->index('fk_paquete_tour1_idx');
+            });
+        }
     }
 
     /**
