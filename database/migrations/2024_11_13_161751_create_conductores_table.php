@@ -11,8 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('paquete', function (Blueprint $table) {
-            $table->foreign(['tour_id_tour'], 'fk_paquete_tour')->references(['id_tour'])->on('tour')->onUpdate('no action')->onDelete('no action');
+        Schema::create('conductor', function (Blueprint $table) {
+            $table->id();
+            $table->timestamps();
         });
     }
 
@@ -21,8 +22,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('paquete', function (Blueprint $table) {
-            $table->dropForeign('fk_paquete_tour');
-        });
+        Schema::dropIfExists('conductor');
     }
 };
