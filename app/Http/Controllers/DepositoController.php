@@ -54,4 +54,3 @@ class DepositoController extends Controller
         return redirect()->route('depositos.index');
     }
 }
-tiene menú contextual
